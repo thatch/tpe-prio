@@ -1,5 +1,9 @@
 # tpe_prio
 
+Use like a regular `concurrent.futures.ThreadPoolExecutor` except there is now a
+`bump(fut)` method.  During execution, the deque gets rotated and put back, so
+it is possible that workers will pick up a non-optimal next choice for a small
+window of time.
 
 
 # License
